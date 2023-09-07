@@ -33,14 +33,10 @@ Para configurar y utilizar esta API, sigue estos pasos:
    pip install -r requirements.txt
    ```
 
-5. Crea un archivo llamado `.env` en la raíz del proyecto y define las siguientes variables de entorno con tus propios valores:
+5. Crea un archivo llamado `.env` en la raíz del proyecto y define la siguiente variable de entorno con tus propios valores:
 
    ```plaintext
-   DB_HOST=Nombre_del_Host_de_tu_Base_de_Datos
-   DB_PORT=Puerto_de_tu_Base_de_Datos
-   DB_USER=Usuario_de_tu_Base_de_Datos
-   DB_PASSWORD=Contraseña_de_tu_Base_de_Datos
-   DB_NAME=Nombre_de_tu_Base_de_Datos
+  DATABASE_URL=postgresql://user_db:passwor_db@localhost/nombre_db
    ```
 
 6. Inicia el servidor con el siguiente comando:
