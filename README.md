@@ -35,9 +35,9 @@ Para configurar y utilizar esta API, sigue estos pasos:
 
 5. Crea un archivo llamado `.env` en la raíz del proyecto y define la siguiente variable de entorno con tus propios valores:
 
-   ```plaintext
-  DATABASE_URL=postgresql://user_db:passwor_db@localhost/nombre_db
-   ```
+    ```plaintext
+      DATABASE_URL=postgresql://user_db:passwor_db@localhost/nombre_db
+    ```
 
 6. Inicia el servidor con el siguiente comando:
 
