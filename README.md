@@ -1,6 +1,14 @@
-# API CONVERSOR DE MAYÚSCULAS
+# API DE CONVERSIÓN A MAYÚSCULAS
 
-Esta API ofrece acceso a las siguientes rutas:
+Esta API ha sido desarrollada utilizando FastAPI y SQLAlchemy y se conecta a una base de datos PostgreSQL. Te permite realizar conversiones de texto a mayúsculas de manera sencilla.
+
+## Acceso a la Documentación
+
+Después de seguir los pasos de configuración mencionados en la sección anterior, puedes acceder a la documentación Swagger de FastAPI para explorar y probar los endpoints de la API. Para hacerlo, abre tu navegador web y ve a la siguiente URL:
+
+[http://localhost:8000/docs](http://localhost:8000/docs)
+
+La dirección puede variar según el puerto en el que se haya levantado el servidor, pero por lo general, el puerto predeterminado es 8000. Asegúrate de que tu servidor esté en ejecución antes de acceder a la documentación Swagger.
 
 ## Rutas Disponibles
 
@@ -24,9 +32,9 @@ Esta API ofrece acceso a las siguientes rutas:
 
 Asegúrate de seguir el formato JSON proporcionado para realizar con éxito una solicitud POST a esta ruta.
 
-## Cómo Utilizar la API
+## Configuración y Uso
 
-Para empezar a usar la API, sigue estos pasos:
+Para configurar y utilizar esta API, sigue estos pasos:
 
 1. Clona el repositorio de FastAPI ORM en tu sistema local:
 
@@ -71,6 +79,6 @@ Para empezar a usar la API, sigue estos pasos:
    uvicorn main:app --reload
    ```
 
-Ahora puedes utilizar la API para acceder a las rutas mencionadas anteriormente y realizar solicitudes POST con la estructura JSON proporcionada.
+Una vez que el servidor esté en funcionamiento, puedes utilizar la API a través de la documentación Swagger proporcionada para realizar conversiones de texto a mayúsculas y explorar otras funcionalidades disponibles.
 
-¡Disfruta de tu API de conversión a mayúsculas! Si tienes algún problema, asegúrate de haber seguido los pasos con precisión y de que tu entorno esté correctamente configurado.
+¡Disfruta de tu API de conversión a mayúsculas desarrollada con FastAPI y SQLAlchemy! Si encuentras algún problema, asegúrate de haber seguido los pasos con precisión y de que tu entorno esté correctamente configurado.
