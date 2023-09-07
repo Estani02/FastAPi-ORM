@@ -1,64 +1,76 @@
 # API CONVERSOR DE MAYÚSCULAS
 
-Esta API está diseñada para convertir texto a mayúsculas. Sigue estos pasos para configurar y ejecutar la aplicación en tu entorno local.
+Esta API ofrece acceso a las siguientes rutas:
 
-## Configuración de la Base de Datos
+## Rutas Disponibles
 
-Primero, debes crear una base de datos PostgreSQL llamada "uppercase_converter" antes de continuar.
+### GET
 
-## Clonar el Repositorio
+- `/data`: Esta ruta te permite acceder a los datos.
+- `/data/{id}`: Con esta ruta, puedes obtener un elemento de datos específico por su ID.
 
-Clona el repositorio de FastAPI ORM en tu sistema local.
+### POST
 
-```bash
-git clone https://github.com/Estani02/FastAPi-ORM.git
+- `/input/{my_target_field}`: Utiliza esta ruta para realizar una solicitud POST y proporcionar datos en el cuerpo del mensaje. Debes ingresar la siguiente estructura JSON en el cuerpo de la solicitud:
+
+```json
+{
+  "field_1": "string",
+  "author": "string",
+  "description": "string",
+  "my_numeric_field": 0
+}
 ```
 
-Luego, navega al directorio del proyecto desde tu terminal.
+Asegúrate de seguir el formato JSON proporcionado para realizar con éxito una solicitud POST a esta ruta.
 
-## Creación de un Entorno Virtual
+## Cómo Utilizar la API
 
-Es una práctica recomendada utilizar entornos virtuales para aislar las dependencias del proyecto. Crea y activa un entorno virtual de la siguiente manera:
+Para empezar a usar la API, sigue estos pasos:
 
-```bash
-# Crear el entorno virtual
-python -m venv venv
+1. Clona el repositorio de FastAPI ORM en tu sistema local:
 
-# Activar el entorno virtual en Windows
-venv\Scripts\activate.bat
+   ```bash
+   git clone https://github.com/Estani02/FastAPi-ORM.git
+   ```
 
-# Activar el entorno virtual en Unix o MacOS
-source venv/bin/activate
-```
+2. Navega al directorio del proyecto desde tu terminal.
 
-## Instalación de Dependencias
+3. Crea y activa un entorno virtual para aislar las dependencias del proyecto:
 
-Instala las dependencias necesarias para el proyecto desde el archivo `requirements.txt`:
+   ```bash
+   # Crear el entorno virtual
+   python -m venv venv
 
-```bash
-pip install -r requirements.txt
-```
+   # Activar el entorno virtual en Windows
+   venv\Scripts\activate.bat
 
-## Configuración de Variables de Entorno
+   # Activar el entorno virtual en Unix o MacOS
+   source venv/bin/activate
+   ```
 
-Crea un archivo llamado `.env` en la raíz del proyecto y define las siguientes variables de entorno con tus propios valores:
+4. Instala las dependencias necesarias desde el archivo `requirements.txt`:
 
-```plaintext
-DB_HOST=Nombre_del_Host_de_tu_Base_de_Datos
-DB_PORT=Puerto_de_tu_Base_de_Datos
-DB_USER=Usuario_de_tu_Base_de_Datos
-DB_PASSWORD=Contraseña_de_tu_Base_de_Datos
-DB_NAME=Nombre_de_tu_Base_de_Datos
-```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-## Iniciar el Servidor
+5. Crea un archivo llamado `.env` en la raíz del proyecto y define las siguientes variables de entorno con tus propios valores:
 
-Una vez configurado todo, puedes iniciar el servidor con el siguiente comando:
+   ```plaintext
+   DB_HOST=Nombre_del_Host_de_tu_Base_de_Datos
+   DB_PORT=Puerto_de_tu_Base_de_Datos
+   DB_USER=Usuario_de_tu_Base_de_Datos
+   DB_PASSWORD=Contraseña_de_tu_Base_de_Datos
+   DB_NAME=Nombre_de_tu_Base_de_Datos
+   ```
 
-```bash
-uvicorn main:app --reload
-```
+6. Inicia el servidor con el siguiente comando:
 
-Si has seguido todos estos pasos correctamente, la API estará funcionando y podrás acceder a ella desde tu navegador o realizar solicitudes a través de herramientas como Postman.
+   ```bash
+   uvicorn main:app --reload
+   ```
+
+Ahora puedes utilizar la API para acceder a las rutas mencionadas anteriormente y realizar solicitudes POST con la estructura JSON proporcionada.
 
 ¡Disfruta de tu API de conversión a mayúsculas! Si tienes algún problema, asegúrate de haber seguido los pasos con precisión y de que tu entorno esté correctamente configurado.
