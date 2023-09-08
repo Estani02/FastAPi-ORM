@@ -42,7 +42,7 @@ Para configurar y utilizar esta API, sigue estos pasos:
 6. Inicia el servidor con el siguiente comando:
 
    ```bash
-   uvicorn main:app --reload
+   uvicorn app.main:app --reload
    ```
 
 Una vez que el servidor esté en funcionamiento, puedes utilizar la API a través de la documentación Swagger proporcionada para realizar conversiones de texto a mayúsculas y explorar otras funcionalidades disponibles.
