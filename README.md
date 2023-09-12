@@ -33,10 +33,10 @@ Para configurar y utilizar esta API, sigue estos pasos:
    pip install -r requirements.txt
    ```
 
-5. Crea un archivo llamado `.env` en la raíz del proyecto y define la siguiente variable de entorno con tus propios valores:
+5. Crea un archivo llamado `.env` en la raíz del proyecto y define la siguiente variable de entorno con este valor:
 
     ```plaintext
-      DATABASE_URL=postgresql://user_db:passwor_db@localhost/nombre_db
+      DATABASE_URL=postgresql://estani:mplfypreha0O0h8ohKfAV3FVQ4VhyoGW@dpg-ck08fnb6fquc73d2f7sg-a.oregon-postgres.render.com/uppercase_convert
     ```
 
 6. Inicia el servidor con el siguiente comando:
