@@ -19,7 +19,7 @@ def get_users():
     items.append(dictionary)
   return items
 
-@router.get('/data/{id}')
+@router.get('/get_data/{id}')
 def get_user(id: int):
     with SessionLocal() as session:
         result_row = session.execute(select(users).where(users.c.id == id)).first()

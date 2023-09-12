@@ -60,7 +60,7 @@ La dirección puede variar según el puerto en el que se haya levantado el servi
 ### GET
 
 - `/data`: Esta ruta te permite acceder a los datos.
-- `/data/{id}`: Con esta ruta, puedes obtener un elemento de datos específico por su ID.
+- `/get_data/{id}`: Con esta ruta, puedes obtener un elemento de datos específico por su ID.
 
 ### POST
 
