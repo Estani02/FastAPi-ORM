@@ -1,8 +1,15 @@
-import uuid
+from sqlalchemy import MetaData, create_engine
+from sqlalchemy.orm import sessionmaker
 from sqlalchemy import Table, Column
 from sqlalchemy.sql.sqltypes import Integer, String
-from sqlalchemy.dialects.postgresql import UUID
-from config.db import meta, engine
+from decouple import config
+
+
+# Configura la conexión a la base de datos PostgreSQL
+meta = MetaData()
+engine = create_engine(config('DATABASE_URL'))
+
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 users = Table('users', meta, 
               Column('id', Integer, primary_key=True, unique=True), 
