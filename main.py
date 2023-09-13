@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from service import read_all_data, read_data, create_data, InputData
+from service import read_all_data, read_data, create_data, InputData, GetData
 
 app = FastAPI()
 
@@ -7,7 +7,7 @@ app = FastAPI()
 def get_users(skip: int = 0, limit: int = 100):
     return read_all_data(skip, limit)
 
-@app.get("/get_data/{id}", response_model=InputData)
+@app.get("/get_data/{id}", response_model=GetData)
 def get_user(id: int):
     return read_data(id)
   

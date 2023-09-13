@@ -5,6 +5,12 @@ from fastapi import HTTPException
 
 # Modelo para la solicitud POST
 class InputData(BaseModel):
+    field_1: str
+    author: str
+    description: str
+    my_numeric_field: int
+    
+class GetData(BaseModel):
     ID: int 
     field_1: str
     author: str
